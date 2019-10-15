@@ -15,42 +15,60 @@ struct MoodList : View {
     @State var isModal: Bool = false
     
     var body: some View {
+        
+        
         GeometryReader { geometry in
-            ScrollView {
+            VStack(alignment: .trailing) {
                 Button(action: {
-                    self.isModal.toggle()
+                    let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MoodEntity")
+                    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+                    do {
+                        try self.managedObjectContext.executeAndMergeChanges(using: batchDeleteRequest)
+                    } catch let error {
+                        print(error)
+                    }
                 }) {
-                    EnterMoodRow()
+                    Text("Delete").frame(height: 30).padding(.trailing)
                 }
-                
-                ForEach(self.moodEntities) {
-                    moodEntity in
-                    MoodRow(mood: moodEntity)
+                ScrollView {
+                    Button(action: {
+                        self.isModal.toggle()
+                    }) {
+                        EnterMoodRow()
+                    }
+                    Section(header: Text("Moods").font(.headline))
+                    {
+                        ForEach(self.moodEntities) {
+                            moodEntity in
+                            MoodRow(mood: moodEntity)
+                        }
+                        .frame(width: geometry.size.width)
+                    }
+                    
                 }
-                    .padding(.vertical, 10)
-
+                .frame(width: geometry.size.width, alignment: .center)
+                .background(Color.backgroundWhite)
+                .sheet(isPresented: self.$isModal, content: {
+                    VStack{
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .frame(width: 20, height: 5, alignment: .center)
+                            .foregroundColor(Color.gray)
+                            .padding(.top, 8)
+                        EnterMoodList(isModal: self.$isModal)
+                            .environment(\.managedObjectContext, self.managedObjectContext)
+                    }
+                    .background(Color.backgroundWhite)
+                })
             }
-            .frame(width: geometry.size.width, alignment: .center)
-            .background(Color.backgroundWhite)
-            .sheet(isPresented: self.$isModal, content: {
-                VStack{
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .frame(width: 20, height: 5, alignment: .center)
-                        .foregroundColor(Color.gray)
-                        .padding(.top, 8)
-                    EnterMoodList(isModal: self.$isModal)
-                        .environment(\.managedObjectContext, self.managedObjectContext)
-                }.background(Color.backgroundWhite)
-            })
         }
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        MoodList()
-            .previewDevice("iPhone 8")
-    }
-}
-#endif
+//#if DEBUG
+//struct ContentView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        MoodList()
+//            .previewDevice("iPhone 8")
+//    }
+//}
+//#endif

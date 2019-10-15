@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A25A39C23562F0000561E5D /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25A39B23562F0000561E5D /* NSManagedObjectContext+Extension.swift */; };
 		0A6F4CCC22D21FDF004D8D56 /* MoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CCB22D21FDF004D8D56 /* MoodRow.swift */; };
 		0A6F4CCE22D2261E004D8D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CCD22D2261E004D8D56 /* Constants.swift */; };
 		0A6F4CD622D22FA2004D8D56 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CD522D22FA2004D8D56 /* Data.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A25A39B23562F0000561E5D /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
 		0A6F4CCB22D21FDF004D8D56 /* MoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRow.swift; sourceTree = "<group>"; };
 		0A6F4CCD22D2261E004D8D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A6F4CD522D22FA2004D8D56 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB2359E2351FDFB00334F00 /* Date+Extension.swift */,
+				0A25A39B23562F0000561E5D /* NSManagedObjectContext+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				0AB2359F2351FDFB00334F00 /* Date+Extension.swift in Sources */,
 				0AF274312343B78900C7BE0C /* EnterMoodList.swift in Sources */,
 				0AD9CED0234670E5001D9096 /* Moods.xcdatamodeld in Sources */,
+				0A25A39C23562F0000561E5D /* NSManagedObjectContext+Extension.swift in Sources */,
 				0AF274332343B78900C7BE0C /* EnterableMoodRow.swift in Sources */,
 				0AF274322343B78900C7BE0C /* EnterMoodRow.swift in Sources */,
 				0AD20E5922D21BFE0066AF23 /* SceneDelegate.swift in Sources */,

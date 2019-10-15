@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             // Set up for core data
             let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            print(managedObjectContext)
             let rootView = MoodList().environment(\.managedObjectContext, managedObjectContext)
             
             let window = UIWindow(windowScene: windowScene)

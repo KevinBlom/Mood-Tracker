@@ -25,10 +25,11 @@ struct MoodRow : View  {
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
         }
-        .padding(22)
+        .padding(.horizontal, 22)
         .frame(width: .cellWidth, height: .cellHeight, alignment: .leading)
         .background(Color.forId(id: mood.moodID).cornerRadius(.cellRadius))
         .shadow(color: Color.forId(id: mood.moodID), radius: 6, x: 0, y: 0)
+        .padding(.vertical, 10)
     }
 }
 
