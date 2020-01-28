@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DaySummaryEntity" representedClassName=".DaySummaryEntity" syncable="YES">
+        <attribute name="averageMood" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="numberOfMoods" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="moods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MoodEntity" inverseName="summary" inverseEntity="MoodEntity"/>
+    </entity>
     <entity name="MoodEntity" representedClassName=".MoodEntity" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="moodID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="summary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DaySummaryEntity" inverseName="moods" inverseEntity="DaySummaryEntity"/>
     </entity>
     <elements>
-        <element name="MoodEntity" positionX="-45" positionY="0" width="128" height="88"/>
+        <element name="DaySummaryEntity" positionX="205.0703125" positionY="-50.55078125" width="128" height="118"/>
+        <element name="MoodEntity" positionX="-45" positionY="0" width="111.703125" height="103"/>
     </elements>
 </model>

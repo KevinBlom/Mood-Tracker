@@ -13,6 +13,7 @@ public class MoodEntity: NSManagedObject, Identifiable {
     @NSManaged public var date:Date
     @NSManaged public var id:UUID
     @NSManaged public var moodID:Int32
+    @NSManaged public var summary: DaySummaryEntity
 }
 
 extension MoodEntity {

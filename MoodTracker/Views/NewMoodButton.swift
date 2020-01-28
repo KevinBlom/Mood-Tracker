@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct EnterMoodRow : View {
+struct NewMoodButton : View {
     var body: some View {
         ZStack (alignment: .center) {
             RoundedRectangle(cornerRadius: .cellRadius)
@@ -28,14 +28,14 @@ struct EnterMoodRow : View {
                 .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [5,5]))
                 .foregroundColor(Color.black.opacity(0.1))
         )
-            .padding(.vertical, 24)
+            .padding(.vertical, 10)
     }
 }
 
 #if DEBUG
 struct EnterMoodRow_Previews : PreviewProvider {
     static var previews: some View {
-        EnterMoodRow()
+        NewMoodButton()
             .previewDevice("iPhone 8")
     }
 }

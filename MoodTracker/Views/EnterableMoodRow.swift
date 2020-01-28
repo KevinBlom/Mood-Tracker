@@ -23,12 +23,3 @@ struct EnterableMoodRow: View {
             .background(backgroundColor.cornerRadius(.cellRadius))
     }
 }
-
-//#if DEBUG
-//struct EnterableMoodRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EnterableMoodRow(moodName: enterableMoodsList[3].moodName, backgroundColor: Color.forId(id: enterableMoodsList[3].id))
-//            .previewDevice("iPhone 8")
-//    }
-//}
-//#endif

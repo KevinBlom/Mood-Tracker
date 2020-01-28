@@ -32,15 +32,15 @@ extension Color {
     
     static func forId(id:Int32) -> Color {
         switch id {
-        case 0:
-            return Color.veryGood
         case 1:
-            return Color.good
+            return Color.veryGood
         case 2:
-            return Color.okay
+            return Color.good
         case 3:
-            return Color.bad
+            return Color.okay
         case 4:
+            return Color.bad
+        case 5:
             return Color.veryBad
         default:
             return Color.red

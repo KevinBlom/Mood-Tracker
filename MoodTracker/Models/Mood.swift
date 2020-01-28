@@ -14,12 +14,12 @@ struct EnterableMood: Hashable, Codable, Identifiable {
 }
 
 class EnterableMoods {
-    var veryGood: EnterableMood = EnterableMood(id: 0, moodName: "Very good")
-    var good: EnterableMood = EnterableMood(id: 1, moodName: "Good")
-    var okay: EnterableMood = EnterableMood(id: 2, moodName: "Okay")
-    var bad: EnterableMood = EnterableMood(id: 3, moodName: "Bad")
-    var veryBad: EnterableMood = EnterableMood(id: 4, moodName: "Very bad")
-    var noMood: EnterableMood = EnterableMood(id: -1, moodName: "No mood")
+    var veryGood: EnterableMood = EnterableMood(id: 1, moodName: "Very good")
+    var good: EnterableMood = EnterableMood(id: 2, moodName: "Good")
+    var okay: EnterableMood = EnterableMood(id: 3, moodName: "Okay")
+    var bad: EnterableMood = EnterableMood(id: 4, moodName: "Bad")
+    var veryBad: EnterableMood = EnterableMood(id: 5, moodName: "Very bad")
+    var noMood: EnterableMood = EnterableMood(id: 0, moodName: "No mood")
     
     var list:[EnterableMood]
     
@@ -29,15 +29,15 @@ class EnterableMoods {
     
     func moodNameForId(id: Int32) -> String {
         switch id {
-        case 0:
-            return veryGood.moodName
         case 1:
-            return good.moodName
+            return veryGood.moodName
         case 2:
-            return okay.moodName
+            return good.moodName
         case 3:
-            return bad.moodName
+            return okay.moodName
         case 4:
+            return bad.moodName
+        case 5:
             return veryBad.moodName
         default:
             return noMood.moodName
