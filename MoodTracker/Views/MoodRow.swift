@@ -24,7 +24,7 @@ struct MoodRow : View  {
                 .font(.headline)
                 .fontWeight(.semibold)
                 .foregroundColor(.white)
-            Text("\(summary.numberOfMoods) entries")
+            Text("\(summary.numberOfMoods) entries") // Nice way to check for 1 vs many entries and editting text accordingly?
                 .font(.caption)
                 .fontWeight(.regular)
                 .foregroundColor(.white)
