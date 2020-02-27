@@ -14,8 +14,7 @@
 		0A25A39C23562F0000561E5D /* NSManagedObjectContext+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25A39B23562F0000561E5D /* NSManagedObjectContext+Extension.swift */; };
 		0A6F4CCC22D21FDF004D8D56 /* MoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CCB22D21FDF004D8D56 /* MoodRow.swift */; };
 		0A6F4CCE22D2261E004D8D56 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CCD22D2261E004D8D56 /* Constants.swift */; };
-		0A6F4CD622D22FA2004D8D56 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CD522D22FA2004D8D56 /* Data.swift */; };
-		0A6F4CD822D22FC8004D8D56 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CD722D22FC8004D8D56 /* Mood.swift */; };
+		0A6F4CD822D22FC8004D8D56 /* EnterableMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F4CD722D22FC8004D8D56 /* EnterableMoods.swift */; };
 		0AAFB81C2363261E009EE02B /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFB81B2363261E009EE02B /* SectionHeader.swift */; };
 		0AAFB81E23632BBD009EE02B /* DaySummaryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFB81D23632BBD009EE02B /* DaySummaryEntity.swift */; };
 		0AB2359D2351F56F00334F00 /* MoodEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2359C2351F56F00334F00 /* MoodEntity.swift */; };
@@ -39,8 +38,7 @@
 		0A25A39B23562F0000561E5D /* NSManagedObjectContext+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extension.swift"; sourceTree = "<group>"; };
 		0A6F4CCB22D21FDF004D8D56 /* MoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRow.swift; sourceTree = "<group>"; };
 		0A6F4CCD22D2261E004D8D56 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0A6F4CD522D22FA2004D8D56 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		0A6F4CD722D22FC8004D8D56 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		0A6F4CD722D22FC8004D8D56 /* EnterableMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterableMoods.swift; sourceTree = "<group>"; };
 		0AAFB81B2363261E009EE02B /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		0AAFB81D23632BBD009EE02B /* DaySummaryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryEntity.swift; sourceTree = "<group>"; };
 		0AB2359C2351F56F00334F00 /* MoodEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntity.swift; sourceTree = "<group>"; };
@@ -121,8 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				0A6F4CCD22D2261E004D8D56 /* Constants.swift */,
-				0A6F4CD522D22FA2004D8D56 /* Data.swift */,
-				0A6F4CD722D22FC8004D8D56 /* Mood.swift */,
+				0A6F4CD722D22FC8004D8D56 /* EnterableMoods.swift */,
 				0AD9CECE234670E5001D9096 /* Moods.xcdatamodeld */,
 				0AB2359C2351F56F00334F00 /* MoodEntity.swift */,
 				0AAFB81D23632BBD009EE02B /* DaySummaryEntity.swift */,
@@ -219,7 +216,6 @@
 			files = (
 				0A03DE3F2392849800C10C4F /* DeleteAllButton.swift in Sources */,
 				0AD20E5722D21BFE0066AF23 /* AppDelegate.swift in Sources */,
-				0A6F4CD622D22FA2004D8D56 /* Data.swift in Sources */,
 				0AAFB81C2363261E009EE02B /* SectionHeader.swift in Sources */,
 				0AB2359F2351FDFB00334F00 /* Date+Extension.swift in Sources */,
 				0AF274312343B78900C7BE0C /* EnterMoodList.swift in Sources */,
@@ -230,7 +226,7 @@
 				0AF274322343B78900C7BE0C /* NewMoodButton.swift in Sources */,
 				0AD20E5922D21BFE0066AF23 /* SceneDelegate.swift in Sources */,
 				0AAFB81E23632BBD009EE02B /* DaySummaryEntity.swift in Sources */,
-				0A6F4CD822D22FC8004D8D56 /* Mood.swift in Sources */,
+				0A6F4CD822D22FC8004D8D56 /* EnterableMoods.swift in Sources */,
 				0A1E466923C4FC9C00EC2A94 /* Settings.swift in Sources */,
 				0AD20E5B22D21BFE0066AF23 /* MoodOverview.swift in Sources */,
 				0A6F4CCE22D2261E004D8D56 /* Constants.swift in Sources */,

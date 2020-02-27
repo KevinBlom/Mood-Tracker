@@ -14,10 +14,7 @@ struct EnterMoodList : View {
     
     @Binding var isModal: Bool
     @Environment(\.managedObjectContext) var managedObjectContext: NSManagedObjectContext
-    
     @FetchRequest(fetchRequest: DaySummaryEntity.getTodaysSummary()) var todaysSummary:FetchedResults<DaySummaryEntity>
-    
-    
     
     var enterableMoods = EnterableMoods()
     
