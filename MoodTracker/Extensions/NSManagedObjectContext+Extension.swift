@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 
+// https://www.avanderlee.com/swift/nsbatchdeleterequest-core-data/
+
 extension NSManagedObjectContext {
     // Executes the given `NSBatchDeleteRequest` and directly merges the changes to bring the given managed object context up to date.
     ///
