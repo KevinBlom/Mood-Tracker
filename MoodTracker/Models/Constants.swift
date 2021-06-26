@@ -17,14 +17,14 @@ extension CGFloat {
 
 extension Color {
     
-    // Mood colors
+    // Mood colors initiated from Assets catalog
     static let veryGood:Color = Color("veryGood")
     static let good:Color = Color("good")
     static let okay:Color = Color("okay")
     static let bad:Color = Color("bad")
     static let veryBad:Color = Color("veryBad")
     
-    // General colors
+    // General colors initiated from Assets catalog
     static let backgroundWhite:Color = Color("background") //Color(red: 248, green: 248, blue: 248)
     static let textDarkBlue:Color = Color("textDarkBlue")
     static let sectionHeaderGray:Color = Color(red: 122, green: 122, blue: 122)

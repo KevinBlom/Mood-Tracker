@@ -11,7 +11,7 @@ import SwiftUI
 struct MoodRow : View  {
     
     var summary: DaySummaryEntity
-    var color:Color = .okay
+    var color:Color = .okay // Let's assume every day is at least 'okay'
     var moods: EnterableMoods = EnterableMoods()
 
     var body: some View {
@@ -28,12 +28,13 @@ struct MoodRow : View  {
                 .font(.caption)
                 .fontWeight(.regular)
                 .foregroundColor(.white)
-            .padding(1)
+            //.padding(1)
         }
         .padding(.horizontal, 22)
         .frame(minWidth: .cellWidth, minHeight: .cellHeight, alignment: .leading)
         .background(Color.forId(id: summary.averageMood).cornerRadius(.cellRadius))
-        .shadow(color: Color.forId(id: summary.averageMood), radius: 6, x: 0, y: 0)
+        .shadow(color: Color.forId(id: summary.averageMood).opacity(0.2), radius: 5, x: 0, y: 2)
+        .shadow(color: Color.forId(id: summary.averageMood).opacity(0.3), radius: 20, x: 0, y: 10)
         .padding(.vertical, 10)
     }
 }

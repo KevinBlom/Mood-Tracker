@@ -11,24 +11,14 @@ import CoreData
 import SwiftUI
 
 struct MoodList: View {
-    
-    // @FetchRequest(fetchRequest: MoodEntity.getAllMoods()) var moodEntities:FetchedResults<MoodEntity>
+
     @FetchRequest(fetchRequest: DaySummaryEntity.getAllSummaries()) var daySummaries: FetchedResults<DaySummaryEntity>
     
-    init() {
-        
-        // To remove all separators including the actual ones:
-        UITableView.appearance().separatorStyle = .none
-    }
-    
     var body: some View {
-        List(self.daySummaries) {
+        ForEach(self.daySummaries) {
             summary in
-            HStack {
-                Spacer()
-                MoodRow(summary: summary)
-                Spacer()
-            }
+            MoodRow(summary: summary)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity , alignment: .top)
     }
 }

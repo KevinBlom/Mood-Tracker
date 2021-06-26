@@ -36,7 +36,8 @@ struct MoodOverview : View {
                 .navigationBarItems(trailing:
                     NavigationLink(destination: Settings()) {
                     Text("Settings").padding()
-                })
+                    })
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
         }
     }

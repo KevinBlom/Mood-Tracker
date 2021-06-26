@@ -38,7 +38,7 @@ struct DeleteAllButton: View {
                     } catch let error {
                         print(error)
                     }
-                },
+                  },
                   secondaryButton: .cancel())
         }
     }
